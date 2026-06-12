@@ -11,6 +11,7 @@
 #contador{
     font-size:24px;
     font-weight:bold;
+    line-height:1.8;
 }
 
 audio{
@@ -20,6 +21,33 @@ audio{
 
 </head>
 <body>
+
+<div id="intro">
+
+<img src="42.jpeg" class="foto-capa">
+
+<h1>Feliz Dia dos Namorados ❤️</h1>
+
+<p id="textoIntro">
+Meu amor,
+<br><br>
+Antes de continuar, quero que saiba que esta não é apenas uma página.
+<br><br>
+É uma pequena lembrança da história mais bonita que eu já vivi.
+<br><br>
+Desde 10 de março de 2017, você transformou meus dias, meus sonhos e minha vida.
+<br><br>
+Hoje construímos uma família e esperamos ansiosamente pelo nosso maior presente:
+o Otto. ❤️
+</p>
+
+<button onclick="entrarSite()">
+Continuar ❤️
+</button>
+
+</div>
+
+<div id="site" style="display:none;">
 
 <div class="container">
 
@@ -31,54 +59,72 @@ audio{
 </div>
 
 <div class="card">
+
 <h2>Nossa História ❤️</h2>
 
 <p>
-Desde 10 de março de 2017 nossas vidas se uniram.
-Passamos por momentos felizes, desafios, conquistas e sonhos.
-Hoje estamos vivendo o capítulo mais especial da nossa história:
+Em 10 de março de 2017 começou uma história que mudaria nossas vidas para sempre.
+<br><br>
+Vivemos momentos felizes, enfrentamos desafios, aprendemos juntos e construímos memórias inesquecíveis.
+<br><br>
+Hoje estamos vivendo um dos capítulos mais especiais da nossa história:
 a chegada do nosso filho Otto.
 </p>
 
 </div>
 
 <div class="card">
+
 <h2>Para Iasmin 💌</h2>
 
 <p>
 Meu amor,
-
-Desde o dia em que você entrou na minha vida, tudo ficou mais bonito.
-
-Você esteve ao meu lado nos momentos mais felizes e também nos mais difíceis.
-
-Hoje, olhando para tudo que construímos juntos, tenho certeza de que escolher você foi a melhor decisão da minha vida.
-
-Obrigado por cada sorriso, cada abraço, cada momento e por me dar a felicidade de construir uma família ao seu lado.
-
-Eu te amo mais do que as palavras conseguem explicar.
-
-Feliz Dia dos Namorados ❤️
+<br><br>
+Existem muitas formas de medir uma vida.
+Alguns contam pelos anos.
+Outros contam pelas conquistas.
+<br><br>
+Mas quando olho para trás, eu conto a minha pelos momentos que vivi ao seu lado.
+<br><br>
+Desde aquele 10 de março de 2017, você se tornou parte dos meus sonhos, dos meus planos e da minha história.
+<br><br>
+Nós crescemos juntos.
+Aprendemos juntos.
+Erramos juntos.
+E vencemos juntos.
+<br><br>
+Hoje estamos esperando o Otto, o maior presente que Deus poderia nos dar.
+<br><br>
+Obrigado por ser minha companheira.
+Obrigado por ser a mulher da minha vida.
+Obrigado por ser a mãe do nosso filho.
+<br><br>
+Eu te amo.
+Hoje, amanhã e até ficarmos velhinhos. ❤️
 </p>
 
 </div>
 
 <div class="card">
+
 <h2>Para Otto 👶</h2>
 
 <p>
-Filho, mesmo antes de te conhecer já te amamos profundamente.
-
-Você é o nosso maior presente.
-
-Estamos esperando ansiosamente pelo dia em que poderemos te segurar nos braços.
-
-Te amamos muito.
+Filho,
+<br><br>
+Mesmo antes de te conhecer já te amamos profundamente.
+<br><br>
+Você é a realização de um sonho.
+<br><br>
+Estamos esperando ansiosamente pelo dia em que poderemos te segurar nos braços e mostrar o quanto você é amado.
+<br><br>
+Te amamos infinitamente.
 </p>
 
 </div>
 
 <div class="card">
+
 <h2>Nossas Fotos 📸</h2>
 
 <div class="galeria">
@@ -132,30 +178,59 @@ Te amamos muito.
 
 </div>
 
-<audio controls autoplay loop>
+<audio id="musicaFinal" loop>
 <source src="final.mp3" type="audio/mpeg">
 </audio>
 
 </div>
 
+</div>
+
 <script>
+
+function entrarSite(){
+
+document.getElementById("intro").style.display="none";
+document.getElementById("site").style.display="block";
+
+const musica = document.getElementById("musicaFinal");
+
+if(musica){
+musica.play();
+}
+
+}
+
 const dataInicio = new Date("2017-03-10T00:00:00");
 
-function atualizarContador() {
+function atualizarContador(){
 
 const agora = new Date();
+
 const diferenca = agora - dataInicio;
 
 const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+
 const horas = Math.floor(diferenca / (1000 * 60 * 60));
 
-document.getElementById("contador").innerHTML =
-"❤️ " + dias.toLocaleString('pt-BR') + " dias juntos<br>⏰ " +
-horas.toLocaleString('pt-BR') + " horas compartilhadas";
+const contador = document.getElementById("contador");
+
+if(contador){
+
+contador.innerHTML =
+"❤️ " + dias.toLocaleString('pt-BR') +
+" dias juntos<br>⏰ " +
+horas.toLocaleString('pt-BR') +
+" horas compartilhadas";
+
+}
+
 }
 
 atualizarContador();
+
 setInterval(atualizarContador,1000);
+
 </script>
 
 </body>
