@@ -4,25 +4,76 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Iasmin ❤️ Gleidson</title>
-<link rel="stylesheet" href="style.css">
-</head>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+#contador{
+    font-size:24px;
+    font-weight:bold;
+}
+
+audio{
+    display:none;
+}
+</style>
+
+</head>
 <body>
 
 <div class="container">
 
 <h1>Iasmin ❤️ Gleidson</h1>
+
 <div class="card">
-  <h2>⏳ Nosso Tempo Juntos</h2>
-  <div id="contador">Carregando...</div>
+<h2>⏳ Nosso Tempo Juntos</h2>
+<div id="contador">Carregando...</div>
 </div>
+
 <div class="card">
 <h2>Nossa História ❤️</h2>
 
 <p>
 Desde 10 de março de 2017 nossas vidas se uniram.
-Hoje estamos vivendo o capítulo mais lindo da nossa história:
+Passamos por momentos felizes, desafios, conquistas e sonhos.
+Hoje estamos vivendo o capítulo mais especial da nossa história:
 a chegada do nosso filho Otto.
+</p>
+
+</div>
+
+<div class="card">
+<h2>Para Iasmin 💌</h2>
+
+<p>
+Meu amor,
+
+Desde o dia em que você entrou na minha vida, tudo ficou mais bonito.
+
+Você esteve ao meu lado nos momentos mais felizes e também nos mais difíceis.
+
+Hoje, olhando para tudo que construímos juntos, tenho certeza de que escolher você foi a melhor decisão da minha vida.
+
+Obrigado por cada sorriso, cada abraço, cada momento e por me dar a felicidade de construir uma família ao seu lado.
+
+Eu te amo mais do que as palavras conseguem explicar.
+
+Feliz Dia dos Namorados ❤️
+</p>
+
+</div>
+
+<div class="card">
+<h2>Para Otto 👶</h2>
+
+<p>
+Filho, mesmo antes de te conhecer já te amamos profundamente.
+
+Você é o nosso maior presente.
+
+Estamos esperando ansiosamente pelo dia em que poderemos te segurar nos braços.
+
+Te amamos muito.
 </p>
 
 </div>
@@ -31,17 +82,81 @@ a chegada do nosso filho Otto.
 <h2>Nossas Fotos 📸</h2>
 
 <div class="galeria">
+
 <img src="1.jpg">
 <img src="2.jpg">
 <img src="3.jpg">
 <img src="4.jpg">
 <img src="5.jpg">
 <img src="6.jpg">
-</div>
+<img src="7.jpg">
+<img src="8.jpg">
+<img src="9.jpg">
+<img src="10.jpg">
+<img src="11.jpg">
+<img src="12.jpg">
+<img src="13.jpg">
+<img src="14.jpg">
+<img src="15.jpg">
+<img src="16.jpg">
+<img src="17.jpg">
+<img src="18.jpg">
+<img src="19.jpg">
+<img src="20.jpg">
+<img src="21.jpg">
+<img src="22.jpg">
+<img src="23.jpg">
+<img src="24.jpg">
+<img src="25.jpg">
+<img src="26.jpg">
+<img src="27.jpg">
+<img src="28.jpg">
+<img src="29.jpeg">
+<img src="30.jpg">
+<img src="31.jpg">
+<img src="32.jpg">
+<img src="33.jpg">
+<img src="34.jpg">
+<img src="35.jpg">
+<img src="36.JPG">
+<img src="37.jpg">
+<img src="38.jpg">
+<img src="39.jpg">
+<img src="40.jpeg">
+<img src="41.jpeg">
+<img src="42.jpeg">
+<img src="43.jpeg">
+<img src="44.jpeg">
 
 </div>
 
 </div>
+
+<audio controls autoplay loop>
+<source src="final.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+const dataInicio = new Date("2017-03-10T00:00:00");
+
+function atualizarContador() {
+
+const agora = new Date();
+const diferenca = agora - dataInicio;
+
+const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+const horas = Math.floor(diferenca / (1000 * 60 * 60));
+
+document.getElementById("contador").innerHTML =
+"❤️ " + dias.toLocaleString('pt-BR') + " dias juntos<br>⏰ " +
+horas.toLocaleString('pt-BR') + " horas compartilhadas";
+}
+
+atualizarContador();
+setInterval(atualizarContador,1000);
+</script>
 
 </body>
 </html>
