@@ -1,20 +1,35 @@
-const dataInicio = new Date("2017-03-10T00:00:00");
+function entrarSite(){
 
-function atualizarContador() {
-  const agora = new Date();
-  const diferenca = agora - dataInicio;
+document.getElementById("intro").style.display="none";
+document.getElementById("site").style.display="block";
 
-  const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
-  const horas = Math.floor(diferenca / (1000 * 60 * 60));
+const musicaFinal = document.getElementById("musicaFinal");
 
-  const contador = document.getElementById("contador");
-
-  if (contador) {
-    contador.innerHTML =
-      `❤️ ${dias.toLocaleString()} dias juntos<br>
-       ⏰ ${horas.toLocaleString()} horas compartilhadas`;
-  }
+if(musicaFinal){
+    musicaFinal.play();
 }
 
-setInterval(atualizarContador, 1000);
+}
+
+const dataInicio = new Date("2017-03-10T00:00:00");
+
+function atualizarContador(){
+
+const agora = new Date();
+const diferenca = agora - dataInicio;
+
+const dias = Math.floor(diferenca/(1000*60*60*24));
+const horas = Math.floor(diferenca/(1000*60*60));
+
+const contador = document.getElementById("contador");
+
+if(contador){
+contador.innerHTML =
+`❤️ ${dias.toLocaleString('pt-BR')} dias juntos<br>
+⏰ ${horas.toLocaleString('pt-BR')} horas compartilhadas`;
+}
+
+}
+
 atualizarContador();
+setInterval(atualizarContador,1000);
