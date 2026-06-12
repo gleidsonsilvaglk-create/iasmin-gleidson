@@ -13,7 +13,6 @@
     font-weight:bold;
     line-height:1.8;
 }
-
 audio{
     display:none;
 }
@@ -22,68 +21,119 @@ audio{
 </head>
 <body>
 
-<div id="capa">
-
-<img src="36.JPG" class="foto-capa">
-
-<h1>Feliz Dia dos Namorados ❤️</h1>
-
-<p id="textoIntro">
-Meu amor,
-<br><br>
-Antes de continuar, quero que saiba que esta não é apenas uma página.
-<br><br>
-É uma pequena lembrança da história mais bonita que eu já vivi.
-<br><br>
-Desde 10 de março de 2017, você transformou meus dias, meus sonhos e minha vida.
-<br><br>
-Hoje construímos uma família e esperamos ansiosamente pelo nosso maior presente:
-o Otto. ❤️
-</p>
-
-<button onclick="iniciarIntro()">
-Continuar ❤️
-</button>
-
-</div>
-<div id="tela1" class="tela">
-    <img src="45.jpg" class="foto-intro">
-    <p>Antes de qualquer coisa, eu queria que você soubesse o quanto você mudou a minha vida.</p>
-    <button onclick="proximaTela()">Continuar ❤️</button>
-</div>
-
-<div id="tela2" class="tela">
-    <img src="1.jpg" class="foto-intro">
-    <p>Desde 10 de março de 2017 eu encontrei muito mais que uma namorada.<br><br>
-    Encontrei minha melhor amiga, minha companheira e a pessoa que escolho todos os dias.</p>
-    <button onclick="proximaTela()">Continuar ❤️</button>
-</div>
-
-<div id="tela3" class="tela">
-    <img src="46.jpg" class="foto-intro">
-    <p>Seu sorriso ilumina meus dias.<br><br>
-    Sua força me inspira.<br><br>
-    Seu amor transformou minha vida.</p>
-    <button onclick="proximaTela()">Continuar ❤️</button>
-</div>
-
-<div id="tela4" class="tela">
-    <img src="44.jpeg" class="foto-intro">
-    <p>E agora você me concedeu o melhor presente do mundo...<br><br>O Otto. ❤️</p>
-    <button onclick="proximaTela()">Continuar ❤️</button>
-</div>
-
-<div id="tela5" class="tela">
-    <img src="42.jpeg" class="foto-intro">
-    <p>Obrigado por cada momento.<br><br>
-    Obrigado por cada abraço.<br><br>
-    Obrigado por ser você.</p>
-    <button onclick="entrarSite()">Nossa História ❤️</button>
-</div>
-
 <audio id="musicaIntro">
     <source src="intro.mp3" type="audio/mpeg">
 </audio>
+
+<audio id="musicaFinal" loop>
+    <source src="final.mp3" type="audio/mpeg">
+</audio>
+
+<div id="capa">
+
+    <img src="36.JPG" class="foto-capa">
+
+    <h1>Feliz Dia dos Namorados ❤️</h1>
+
+    <p>
+        Meu amor...
+        <br><br>
+        Preparei uma pequena lembrança da nossa história.
+        <br><br>
+        Quero que você leia cada palavra com calma.
+    </p>
+
+    <button onclick="iniciarIntro()">
+        Continuar ❤️
+    </button>
+
+</div>
+
+<div id="tela1" class="tela" style="display:none;">
+
+    <img src="45.jpg" class="foto-intro">
+
+    <p>
+        Antes de qualquer coisa,
+        eu queria que você soubesse o quanto você mudou a minha vida.
+    </p>
+
+    <button onclick="proximaTela()">
+        Continuar ❤️
+    </button>
+
+</div>
+
+<div id="tela2" class="tela" style="display:none;">
+
+    <img src="1.jpg" class="foto-intro">
+
+    <p>
+        Desde 10 de março de 2017 eu encontrei muito mais que uma namorada.
+        <br><br>
+        Encontrei minha melhor amiga,
+        minha companheira
+        e a pessoa que escolho todos os dias.
+    </p>
+
+    <button onclick="proximaTela()">
+        Continuar ❤️
+    </button>
+
+</div>
+
+<div id="tela3" class="tela" style="display:none;">
+
+    <img src="46.jpg" class="foto-intro">
+
+    <p>
+        Seu sorriso ilumina meus dias.
+        <br><br>
+        Sua força me inspira.
+        <br><br>
+        Seu amor transformou minha vida.
+    </p>
+
+    <button onclick="proximaTela()">
+        Continuar ❤️
+    </button>
+
+</div>
+
+<div id="tela4" class="tela" style="display:none;">
+
+    <img src="44.jpeg" class="foto-intro">
+
+    <p>
+        E agora você me concedeu o melhor presente do mundo...
+        <br><br>
+        O Otto ❤️
+    </p>
+
+    <button onclick="proximaTela()">
+        Continuar ❤️
+    </button>
+
+</div>
+
+<div id="tela5" class="tela" style="display:none;">
+
+    <img src="42.jpeg" class="foto-intro">
+
+    <p>
+        Obrigado por cada momento.
+        <br><br>
+        Obrigado por cada abraço.
+        <br><br>
+        Obrigado por ser você.
+    </p>
+
+    <button onclick="entrarSite()">
+        Nossa História ❤️
+    </button>
+
+</div>
+
 <div id="site" style="display:none;">
 
 <div class="container">
@@ -96,16 +146,22 @@ Continuar ❤️
 </div>
 
 <div class="card">
-
 <h2>Nossa História ❤️</h2>
 
 <p>
+
 Em 10 de março de 2017 começou uma história que mudaria nossas vidas para sempre.
+
 <br><br>
+
 Vivemos momentos felizes, enfrentamos desafios, aprendemos juntos e construímos memórias inesquecíveis.
+
 <br><br>
+
 Hoje estamos vivendo um dos capítulos mais especiais da nossa história:
+
 a chegada do nosso filho Otto.
+
 </p>
 
 </div>
@@ -115,29 +171,41 @@ a chegada do nosso filho Otto.
 <h2>Para Iasmin 💌</h2>
 
 <p>
-Meu amor,
+
+Meu amor...
+
 <br><br>
-Existem muitas formas de medir uma vida.
-Alguns contam pelos anos.
-Outros contam pelas conquistas.
+
+Desde aquele 10 de março de 2017 você se tornou parte dos meus sonhos, dos meus planos e da minha história.
+
 <br><br>
-Mas quando olho para trás, eu conto a minha pelos momentos que vivi ao seu lado.
-<br><br>
-Desde aquele 10 de março de 2017, você se tornou parte dos meus sonhos, dos meus planos e da minha história.
-<br><br>
+
 Nós crescemos juntos.
+
 Aprendemos juntos.
+
 Erramos juntos.
+
 E vencemos juntos.
+
 <br><br>
+
 Hoje estamos esperando o Otto, o maior presente que Deus poderia nos dar.
+
 <br><br>
+
 Obrigado por ser minha companheira.
+
 Obrigado por ser a mulher da minha vida.
+
 Obrigado por ser a mãe do nosso filho.
+
 <br><br>
+
 Eu te amo.
+
 Hoje, amanhã e até ficarmos velhinhos. ❤️
+
 </p>
 
 </div>
@@ -147,15 +215,21 @@ Hoje, amanhã e até ficarmos velhinhos. ❤️
 <h2>Para Otto 👶</h2>
 
 <p>
-Filho,
+
+Filho...
+
 <br><br>
+
 Mesmo antes de te conhecer já te amamos profundamente.
+
 <br><br>
+
 Você é a realização de um sonho.
+
 <br><br>
-Estamos esperando ansiosamente pelo dia em que poderemos te segurar nos braços e mostrar o quanto você é amado.
-<br><br>
-Te amamos infinitamente.
+
+Estamos esperando ansiosamente pelo dia em que poderemos te segurar nos braços.
+
 </p>
 
 </div>
@@ -165,110 +239,3 @@ Te amamos infinitamente.
 <h2>Nossas Fotos 📸</h2>
 
 <div class="galeria">
-
-<img src="1.jpg">
-<img src="2.jpg">
-<img src="3.jpg">
-<img src="4.jpg">
-<img src="5.jpg">
-<img src="6.jpg">
-<img src="7.jpg">
-<img src="8.jpg">
-<img src="9.jpg">
-<img src="10.jpg">
-<img src="11.jpg">
-<img src="12.jpg">
-<img src="13.jpg">
-<img src="14.jpg">
-<img src="15.jpg">
-<img src="16.jpg">
-<img src="17.jpg">
-<img src="18.jpg">
-<img src="19.jpg">
-<img src="20.jpg">
-<img src="21.jpg">
-<img src="22.jpg">
-<img src="23.jpg">
-<img src="24.jpg">
-<img src="25.jpg">
-<img src="26.jpg">
-<img src="27.jpg">
-<img src="28.jpg">
-<img src="29.jpeg">
-<img src="30.jpg">
-<img src="31.jpg">
-<img src="32.jpg">
-<img src="33.jpg">
-<img src="34.jpg">
-<img src="35.jpg">
-<img src="36.JPG">
-<img src="37.jpg">
-<img src="38.jpg">
-<img src="39.jpg">
-<img src="40.jpeg">
-<img src="41.jpeg">
-<img src="42.jpeg">
-<img src="43.jpeg">
-<img src="44.jpeg">
-
-</div>
-
-</div>
-
-<audio id="musicaFinal" loop>
-<source src="final.mp3" type="audio/mpeg">
-</audio>
-
-</div>
-
-</div>
-
-<script>
-
-function entrarSite(){
-
-document.getElementById("intro").style.display="none";
-document.getElementById("site").style.display="block";
-
-const musica = document.getElementById("musicaFinal");
-
-if(musica){
-musica.play();
-}
-
-}
-
-const dataInicio = new Date("2017-03-10T00:00:00");
-
-function atualizarContador(){
-
-const agora = new Date();
-
-const diferenca = agora - dataInicio;
-
-const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
-
-const horas = Math.floor(diferenca / (1000 * 60 * 60));
-
-const contador = document.getElementById("contador");
-
-if(contador){
-
-contador.innerHTML =
-"❤️ " + dias.toLocaleString('pt-BR') +
-" dias juntos<br>⏰ " +
-horas.toLocaleString('pt-BR') +
-" horas compartilhadas";
-
-}
-
-}
-
-atualizarContador();
-
-setInterval(atualizarContador,1000);
-
-</script>
-
-</body>
-</html>
