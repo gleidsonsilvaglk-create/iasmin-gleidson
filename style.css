@@ -115,3 +115,56 @@ button:hover{
 audio{
     display:none;
 }
+#capa,
+.tela{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+#capa p,
+.tela p{
+    max-width:700px;
+    margin:20px auto;
+    line-height:1.8;
+    font-size:22px;
+}
+
+.foto-intro{
+    width:350px;
+    max-width:90%;
+    border-radius:20px;
+    margin-bottom:25px;
+    box-shadow:0 0 30px rgba(212,175,55,.4);
+}
+.card{
+    text-align:center !important;
+}
+
+.card p{
+    text-align:center !important;
+    max-width:800px;
+    margin:0 auto;
+    line-height:1.9;
+    font-size:20px;
+}
+
+.card h2{
+    text-align:center;
+}
+
+.container{
+    text-align:center;
+}
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:25px;
+    padding:35px;
+    margin:30px 0;
+    box-shadow:0 0 20px rgba(212,175,55,.1);
+}
